@@ -62,7 +62,7 @@ ROOT_URLCONF = 'blango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,6 +74,12 @@ TEMPLATES = [
         },
     },
 ]
+
+### Debug attempt
+TEMPALTE_DIRS = (
+  os.path.join(BASE_DIR, 'templates'),
+)
+### end
 
 WSGI_APPLICATION = 'blango.wsgi.application'
 
