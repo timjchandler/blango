@@ -1,0 +1,10 @@
+Hi,
+
+You have registered for Blango, but you still need to activate your account.
+
+To do that, visit this page within the next {{ expiration_days }} days.
+
+{{ scheme }}://{{ request.get_host }}{% url "django_registration_activate" activation_key %}
+
+Thanks,
+Blango 
