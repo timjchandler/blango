@@ -45,9 +45,13 @@ class Dev(Configuration):
   CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
   CRISPY_TEMPLATE_PACK = "bootstrap5"
 
+  AUTH_USER_MODEL = "blango_auth.User"
+
   # Application definition
 
   INSTALLED_APPS = [
+      'blango_auth',
+      'blog',
       'django.contrib.admin',
       'django.contrib.auth',
       'django.contrib.contenttypes',
@@ -56,7 +60,6 @@ class Dev(Configuration):
       'django.contrib.staticfiles',
       'crispy_forms',
       'crispy_bootstrap5',
-      'blog',
       'debug_toolbar',
   ]
 
